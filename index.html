@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Strategy | Consulting Assessment</title>
+    <meta name="description" content="Test your strategic consulting expertise with real-world growth strategy case studies. Score your consulting acumen across 15 advanced questions.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <main id="app">
+        <!-- ==================== HOME SCREEN ==================== -->
+        <section id="home-screen" class="screen active">
+            <div class="card glass-card home-card">
+                <h1 class="home-title">Growth Strategy<br>Assessment</h1>
+                <p class="home-subtitle">Test your strategic consulting skills against real-world growth cases spanning revenue optimization, market expansion, and international go-to-market strategy.</p>
+                <div class="feature-box">
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>15 Questions across 2 real consulting case studies</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Instant strategic feedback on every answer</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Get rated on a 10-point consulting expertise scale</span>
+                    </div>
+                </div>
+                <button id="start-btn" class="cta-btn">Start Assessment</button>
+            </div>
+        </section>
+
+        <!-- ==================== QUIZ SCREEN ==================== -->
+        <section id="quiz-screen" class="screen">
+            <div class="card glass-card quiz-card">
+                <!-- Progress Bar -->
+                <div class="progress-row">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-label" id="progress-label">1 / 15</span>
+                </div>
+
+                <!-- Category Badge -->
+                <span class="category-badge" id="category-badge">CASE 1</span>
+
+                <!-- Question Text -->
+                <h2 class="question-text" id="question-text"></h2>
+
+                <!-- Options -->
+                <div class="options-list" id="options-list"></div>
+
+                <!-- Next Button (hidden until answer) -->
+                <button class="cta-btn next-btn hidden" id="next-btn">Next Question</button>
+            </div>
+        </section>
+
+        <!-- ==================== RESULT SCREEN ==================== -->
+        <section id="result-screen" class="screen">
+            <div class="card glass-card result-card">
+                <h2 class="result-heading">Your Consulting Persona</h2>
+                <p class="result-score">Score: <strong id="final-score">0</strong>/450</p>
+
+                <!-- Persona Card -->
+                <div class="persona-card" id="persona-card">
+                    <h1 class="persona-name" id="persona-name">Strategist</h1>
+                    <p class="persona-desc" id="persona-desc"></p>
+                </div>
+
+                <!-- Expertise Rating -->
+                <div class="expertise-section">
+                    <span class="expertise-label">Consulting Expertise Rating</span>
+                    <div class="expertise-score" id="expertise-score">0/10</div>
+                </div>
+
+                <!-- Tier List -->
+                <div class="tier-list" id="tier-list"></div>
+
+                <!-- Actions -->
+                <div class="result-actions">
+                    <button class="cta-btn" onclick="location.reload()">Retake Assessment</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
